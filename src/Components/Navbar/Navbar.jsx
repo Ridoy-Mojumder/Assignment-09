@@ -7,10 +7,10 @@ const Navbar = () => {
     const [showUserName, setShowUserName] = useState(false);
 
     const links = <>
-        <li><NavLink className="text-blue-500 font-semibold px-4 py-2 rounded-sm transition duration-300 hover:bg-blue-500 hover:text-white" activeClassName="activeNavLink" to="/">Home</NavLink></li>
-        <li><NavLink className="text-blue-500 font-semibold px-4 py-2 rounded-sm transition duration-300 hover:bg-blue-500 hover:text-white" to="/aboutUs" >About Us</NavLink></li>
-        <li><NavLink className="text-blue-500 font-semibold px-4 py-2 rounded-sm transition duration-300 hover:bg-blue-500 hover:text-white" to="/contactUs">Contact Us</NavLink></li>
-        <li><NavLink className="text-blue-500 font-semibold px-4 py-2 rounded-sm transition duration-300 hover:bg-blue-500 hover:text-white" to="/updateProfile">Update Profile</NavLink></li>
+        <li><NavLink className="text-blue-500 font-semibold px-4 py-2 rounded-lg transition duration-300  " activeClassName="activeNavLink" to="/">Home</NavLink></li>
+        <li><NavLink className="text-blue-500 font-semibold px-4 py-2 rounded-lg transition duration-300 " to="/aboutUs" >About Us</NavLink></li>
+        <li><NavLink className="text-blue-500 font-semibold px-4 py-2 rounded-lg transition duration-300 " to="/contactUs">Contact Us</NavLink></li>
+        <li><NavLink className="text-blue-500 font-semibold px-4 py-2 rounded-lg transition duration-300 " to="/updateProfile">Update Profile</NavLink></li>
     </>
 
     const handleMouseEnter = () => {
@@ -32,7 +32,23 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <NavLink to="/" className="btn btn-ghost font-bold text-2xl">StoryScape</NavLink>
+                <NavLink
+                    to="/"
+                    className="btn btn-ghost relative inline-block text-2xl font-bold py-2 px-4 overflow-hidden cursor-pointer"
+                    style={{
+                        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                        color: '#ffffff',
+                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                    }}
+                >
+                    <span className="block relative z-10">Dream Home</span>
+                    <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full" style={{
+                        background: 'linear-gradient(135deg, #764ba2 0%, #667eea 100%)',
+                        transition: 'all 0.4s ease'
+                    }}></div>
+                    <div className="absolute inset-0 w-full h-full transition-transform duration-300 ease-in-out hover:-translate-x-full"></div>
+                    <div className="absolute inset-0 w-full h-full transition-transform duration-300 ease-in-out group-hover:translate-x-full"></div>
+                </NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-black">
@@ -41,6 +57,7 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end gap-4">
+
                 {user ? (
                     <div className="flex items-center">
                         <div className="relative inline-block">
@@ -69,13 +86,10 @@ const Navbar = () => {
                                 Sign In
                             </button>
                         </NavLink>
-                        <NavLink to='/signUp'>
-                            <button className='p-2 text-white text-[14px] font-semibold rounded-md shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-300 bg-gradient-to-r from-blue-400 to-blue-500 lg:w-28'>
-                                Sign Up
-                            </button>
-                        </NavLink>
+
                     </>
                 )}
+
 
 
             </div>

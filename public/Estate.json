@@ -1,0 +1,156 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Luxury Villa with Ocean View",
+      "segment_name": "Single-family homes",
+      "description": "Stunning luxury villa with breathtaking ocean views. This spacious property features 5 bedrooms, a private swimming pool, modern kitchen, and landscaped gardens.",
+      "price": "$2,500,000",
+      "status": "sale",
+      "area": "4500 sq ft",
+      "location": "Malibu, California",
+      "facilities": ["Swimming Pool", "Ocean View", "Modern Kitchen", "Garden"],
+      "image": "https://i.ibb.co/prcqzP5/photo-modern-townhouse-exterior-1055425-40114.jpg",
+      "other_info": {
+        "bedrooms": 5,
+        "bathrooms": 6,
+        "garage": 3
+      }
+    },
+    {
+      "id": 2,
+      "estate_title": "Cozy Family Home",
+      "segment_name": "Townhouses",
+      "description": "Charming family home perfect for comfortable living. Features 3 bedrooms, spacious living area, and a beautiful backyard with a garden.",
+      "price": "$400,000",
+      "status": "sale",
+      "area": "2000 sq ft",
+      "location": "Austin, Texas",
+      "facilities": ["Garden", "Spacious Living Area", "Modern Kitchen"],
+      "image": "https://i.ibb.co/HHwXkxc/country-cottage-green-vegetation-218872-1422.jpg",
+      "other_info": {
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "garage": 2
+      }
+    },
+    {
+      "id": 3,
+      "estate_title": "Modern Downtown Apartment",
+      "segment_name": "Apartments",
+      "description": "Contemporary apartment located in the heart of the city. This stylish unit features 2 bedrooms, open-plan living area, and access to communal facilities.",
+      "price": "$1,200/month",
+      "status": "rent",
+      "area": "1200 sq ft",
+      "location": "New York City, New York",
+      "facilities": ["Gym", "24/7 Security", "Modern Kitchen"],
+      "image": "https://i.ibb.co/GPr6svq/comfortable-modern-bedroom-with-elegant-decoration-lighting-generative-ai-188544-7715.jpg",
+      "other_info": {
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "floor": 15
+      }
+    },
+    {
+      "id": 4,
+      "estate_title": "Riverside Retreat",
+      "segment_name": "Student Housing",
+      "description": "Tranquil riverside retreat perfect for nature lovers. This cozy cabin features 2 bedrooms, a fireplace, and a private dock for fishing and boating.",
+      "price": "$300,000",
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "Asheville, North Carolina",
+      "facilities": ["Riverfront", "Fireplace", "Private Dock"],
+      "image": "https://i.ibb.co/pxLPD5P/full-shot-students-preparing-exam-23-2149647062.jpg",
+      "other_info": {
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "lot_size": "1 acre"
+      }
+    },
+    {
+      "id": 5,
+      "estate_title": "Mountain View Chalet",
+      "segment_name": "Senior Living Communities",
+      "description": "Cozy mountain chalet with stunning views. This charming property features 4 bedrooms, a spacious deck, and easy access to hiking trails.",
+      "price": "$750,000",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "Denver, Colorado",
+      "facilities": ["Mountain View", "Deck", "Hiking Trails"],
+      "image": "https://i.ibb.co/D1jCqSC/group-happy-mature-people-laughing-while-enjoying-card-game-table-637285-2714.jpg",
+      "other_info": {
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "garage": 2
+      }
+    },
+    {
+      "id": 6,
+      "estate_title": "Lakefront Retreat",
+      "segment_name": "Vacation Rentals",
+      "description": "Peaceful lakefront retreat perfect for relaxation. This serene property features 3 bedrooms, a private dock, and beautiful sunset views.",
+      "price": "$600,000",
+      "status": "rent",
+      "area": "2500 sq ft",
+      "location": "Orlando, Florida",
+      "facilities": ["Lakefront", "Private Dock", "Sunset Views"],
+      "image": "https://i.ibb.co/4fk3HpR/orange-mattress-pool-192787-17.jpg",
+      "other_info": {
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "lot_size": "0.5 acre"
+      }
+    },
+    {
+      "id": 7,
+      "estate_title": "Luxury Penthouse",
+      "segment_name": "Condominiums",
+      "description": "Luxurious penthouse living in the heart of the city. This upscale property features 3 bedrooms, panoramic city views, and exclusive amenities.",
+      "price": "$3,000,000",
+      "status": "sale",
+      "area": "4000 sq ft",
+      "location": "San Francisco, California",
+      "facilities": ["Penthouse", "City View", "Amenities"],
+      "image": "https://i.ibb.co/8rkXvS0/photo-luxury-condominium-lobby-with-modern-decoration-1056572-34247.jpg",
+      "other_info": {
+        "bedrooms": 3,
+        "bathrooms": 4,
+        "floor": 30
+      }
+    },
+    {
+      "id": 8,
+      "estate_title": "Modern Townhouse",
+      "segment_name": "Duplexes",
+      "description": "Sleek and modern townhouse in a vibrant neighborhood. This stylish property features 2 bedrooms, a rooftop terrace, and easy access to amenities.",
+      "price": "$850,000",
+      "status": "rent",
+      "area": "1800 sq ft",
+      "location": "Seattle, Washington",
+      "facilities": ["Rooftop Terrace", "Modern Design", "Amenities"],
+      "image": "https://i.ibb.co/brszcWF/modern-home-with-garage-garage-door-781958-473.jpg",
+      "other_info": {
+        "bedrooms": 2,
+        "bathrooms": 3,
+        "garage": 1
+      }
+    },
+    {
+      "id": 9,
+      "estate_title": "Beachfront Condo",
+      "segment_name": "Luxury homes",
+      "description": "Beachfront living at its finest. This elegant condo features 2 bedrooms, direct beach access, and stunning sunset views from the balcony.",
+      "price": "$900,000",
+      "status": "sale",
+      "area": "1600 sq ft",
+      "location": "Miami, Florida",
+      "facilities": ["Beachfront", "Balcony", "Sunset Views"],
+      "image": "https://i.ibb.co/mzfvjVP/ai-generated-house-design-23-2150666437.jpg",
+      "other_info": {
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "floor": 10
+      }
+    }
+  ]
+  

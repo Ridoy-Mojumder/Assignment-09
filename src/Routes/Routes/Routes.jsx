@@ -6,10 +6,14 @@ import ContactUs from "../../Components/ContactUs/ContactUs";
 import UpdateProfile from "../../Components/UpdateProfile/UpdateProfile";
 import SignIn from "../../Components/SignIn/SignIn";
 import SignUp from "../../Components/SignUp/SignUp";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import EstateDetails from "../../Components/EstateDetails/EstateDetails";
+import ErrorPage from "../../Components/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
     {
       path: "/",
+      errorElement:<ErrorPage></ErrorPage>,
       element: <Root></Root>,
       children:[
         {
@@ -26,15 +30,20 @@ export const router = createBrowserRouter([
         },
         {
           path: "/aboutUs",
-          element: <AboutUs></AboutUs>
+          element: <PrivateRoute><AboutUs></AboutUs></PrivateRoute>
         },
         {
           path: "/contactUs",
-          element: <ContactUs></ContactUs>
+          element: <PrivateRoute><ContactUs></ContactUs></PrivateRoute>
+        },
+        {
+          path: "/estate/:id",
+          element: <EstateDetails></EstateDetails>,
+          loader: () => fetch('../Estate.json') 
         },
         {
           path: "/updateProfile",
-          element: <UpdateProfile></UpdateProfile>
+          element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
         },
       ]
       
