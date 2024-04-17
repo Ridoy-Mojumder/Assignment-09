@@ -22,8 +22,8 @@ const BannerSection = () => {
             </div>
             {/* text container here */}
             <div className="w-1/2 px-4 left-0 absolute drop-shadow-lg text-white rounded-lg">
-                <h1 className="lg:text-3xl mb-3">{sliders[currentSlider].title}</h1>
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg">{sliders[currentSlider].des}</p>
+                <h1 className="lg:text-3xl mb-3 animate__animated animate__backInLeft">{sliders[currentSlider].title}</h1>
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg animate__animated animate__backInLeft">{sliders[currentSlider].des}</p>
             </div>
             {/* slider container */}
             <div className="w-1/2 ml-auto overflow-hidden  absolute -right-5 lg:-right-16 z-50 px-4 py-10">

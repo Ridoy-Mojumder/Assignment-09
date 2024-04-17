@@ -6,7 +6,7 @@ const Estate = ({ estate }) => {
     const { id,estate_title, segment_name, price, image, other_info } = estate;
     const { bedrooms, bathrooms, garage } = other_info;
     return (
-        <div className="mx-auto max-w-[350px] space-y-4 rounded-lg bg-white p-6 shadow-lg md:w-[350px] dark:bg-[#18181B]">
+        <div className="mx-auto max-w-[350px] space-y-4 rounded-lg bg-white p-6 shadow-lg md:w-[350px] dark:bg-[#18181B] animate__animated animate__bounceInRight">
             <img width={200} height={200} className="h-[275px] w-[350px] rounded-lg object-cover" src={image} alt="card navigate ui" />
             <div className="grid gap-2">
                 <h1 className="text-lg font-semibold ">{estate_title}</h1>

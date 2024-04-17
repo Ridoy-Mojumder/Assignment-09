@@ -11,7 +11,7 @@ const ContactUs = () => {
                 <title>Contact Us</title>
                 <link rel="canonical" href="http://mysite.com/contact-us" />
             </Helmet>
-            <h1 className="text-4xl font-semibold mb-6">Get in Touch</h1>
+            <h1 className="text-4xl font-semibold mb-6">You can message us</h1>
             <form className="space-y-4">
                 <div>
                     <input

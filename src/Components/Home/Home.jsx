@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import BannerSection from "../BannerSection/BannerSection";
 import EstateSection from "../EstateSection/EstateSection";
 import OurServices from "../OurServices/OurServices";
+import OurLocation from "../OurLocation/OurLocation";
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <BannerSection></BannerSection>
             <EstateSection></EstateSection>
             <OurServices></OurServices>
+            <OurLocation></OurLocation>
         </div>
     );
 };

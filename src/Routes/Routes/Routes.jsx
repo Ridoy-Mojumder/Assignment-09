@@ -9,6 +9,7 @@ import SignUp from "../../Components/SignUp/SignUp";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import EstateDetails from "../../Components/EstateDetails/EstateDetails";
 import ErrorPage from "../../Components/ErrorPage/ErrorPage";
+import Location from "../../Components/OurLocation/Location";
 
 export const router = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
           path: "/updateProfile",
           element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
         },
+        {
+          path: '/location',
+          element: <Location></Location>
+        }
       ]
       
     },

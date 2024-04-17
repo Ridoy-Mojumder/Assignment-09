@@ -35,7 +35,7 @@ const EstateDetails = () => {
             <div>
                     <div className="flex  py-6 text-2xl font-bold  ">
                         <Marquee pauseOnHover={true} speed={130}>
-                            <Link className="mr-12 animate__animated animate__bounce" >{id} Estate Details</Link>
+                            <Link className="mr-12 " >{id} Estate Details</Link>
                         </Marquee>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ const EstateDetails = () => {
                     <img src={image} alt={estate_title} className="w-full h-full mb-4 rounded-md" />
                 </div>
                 <div>
-                    <h1 className="text-2xl font-semibold mb-2">{estate_title}</h1>
+                    <h1 className="text-2xl font-semibold mb-2 animate__animated animate__backInLeft">{estate_title}</h1>
                     <h1 className="text-xl font-semibold mb-2">{segment_name}</h1>
 
                     <div className="py-4">
