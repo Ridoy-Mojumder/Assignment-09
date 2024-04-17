@@ -1,37 +1,50 @@
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+
+// import required modules
+import { Navigation } from 'swiper/modules';
 import { MdEmail, MdPhone, MdRoom } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-
+import Marquee from 'react-fast-marquee';
 
 const OurLocation = () => {
-    
+
 
     return (
-        <div className="min-h-screen bg-gray-50 py-10 px-4">
-            <div className="max-w-6xl mx-auto">
-                <h1 className="text-5xl font-bold text-center text-blue-900 mb-16">Our Location</h1>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    
+        <>
+        <h1 className="text-5xl font-bold text-center text-blue-900 mb-16">Our Location</h1>
+            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+                <SwiperSlide>
                     <Link to="/location">
                         <div className="bg-white shadow-lg rounded-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
                             <MdRoom className="text-6xl text-blue-500 mx-auto mb-6" />
                             <h2 className="font-bold text-2xl mb-3">Location</h2>
                             <p className="text-gray-600">123 Main Street, City, Country</p>
+                            <p><small>If you click in here you can see our location</small></p>
                         </div>
                     </Link>
+                </SwiperSlide>
+                <SwiperSlide>
                     <div className="bg-white shadow-lg rounded-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
                         <MdPhone className="text-6xl text-blue-500 mx-auto mb-6" />
                         <h2 className="font-bold text-2xl mb-3">Phone</h2>
                         <p className="text-gray-600">+1 234 567 890</p>
-                    </div>
+                    </div></SwiperSlide>
+                <SwiperSlide>
                     <div className="bg-white shadow-lg rounded-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
                         <MdEmail className="text-6xl text-blue-500 mx-auto mb-6" />
                         <h2 className="font-bold text-2xl mb-3">Email</h2>
                         <p className="text-gray-600">info@example.com</p>
                     </div>
-                </div>
-            </div>
-        </div>
+                </SwiperSlide>
+            </Swiper>
+        </>
     );
 };
 

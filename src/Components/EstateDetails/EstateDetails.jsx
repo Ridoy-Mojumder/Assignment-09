@@ -32,7 +32,7 @@ const EstateDetails = () => {
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <div className="mx-auto w-auto flex max-w-auto flex-col items-center justify-center space-y-4 rounded-xl bg-white p-8 font-sans shadow-lg dark:bg-[#18181B]">
-            <div>
+                <div>
                     <div className="flex  py-6 text-2xl font-bold  ">
                         <Marquee pauseOnHover={true} speed={130}>
                             <Link className="mr-12 " >{id} Estate Details</Link>

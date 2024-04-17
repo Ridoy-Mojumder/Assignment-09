@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
 import 'animate.css';
+import 'swiper/swiper-bundle.css';
 
 const Root = () => {
     return (
