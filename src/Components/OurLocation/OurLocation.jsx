@@ -18,7 +18,10 @@ const OurLocation = () => {
 
     return (
         <>
-        <h1 className="text-5xl font-bold text-center text-blue-900 mb-16">Our Location</h1>
+            <h1 className="text-5xl font-bold text-center text-blue-900 mb-8">Our Location</h1>
+            <Marquee>
+            <p className='text-center'>If you click on Location Icon you can see our Live location</p>
+            </Marquee>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                 <SwiperSlide>
                     <Link to="/location">
