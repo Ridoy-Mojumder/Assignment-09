@@ -1,6 +1,7 @@
 import Marquee from "react-fast-marquee";
 import { Helmet } from "react-helmet";
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import PrivateRoute from "../../Routes/PrivateRoute/PrivateRoute";
 
 const EstateDetails = () => {
     const estates = useLoaderData();
@@ -26,68 +27,70 @@ const EstateDetails = () => {
 
     return (
         <>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>{id} Estate Details</title>
-                <link rel="canonical" href="http://mysite.com/example" />
-            </Helmet>
-            <div className="mx-auto w-auto flex max-w-auto flex-col items-center justify-center space-y-4 rounded-xl bg-white p-8 font-sans shadow-lg dark:bg-[#18181B]">
-                <div>
-                    <div className="flex  py-6 text-2xl font-bold  ">
-                        <Marquee pauseOnHover={true} speed={130}>
-                            <Link className="mr-12 " >{id} Estate Details</Link>
-                        </Marquee>
-                    </div>
-                </div>
-                <div className='justify-center items-center'>
-                    <img src={image} alt={estate_title} className="w-full h-full mb-4 rounded-md" />
-                </div>
-                <div>
-                    <h1 className="text-2xl font-semibold mb-2 animate__animated animate__backInLeft">{estate_title}</h1>
-                    <h1 className="text-xl font-semibold mb-2">{segment_name}</h1>
-
-                    <div className="py-4">
-                        Our Facilities:
-                        {facilities.map((faciliti, index) => (
-                            <span key={index} className="inline-block px-3 py-1 text-sm font-semibold text-blue-500 mr-2 my-4"> {faciliti}</span>
-                        ))}
-                    </div>
-                    <h2 className="text-gray-600 mb-2">Price: {price}</h2>
-                    <hr />
-                    <div className="flex justify-between py-4">
-                        <span>{description}</span>
-                    </div>
-                    <hr />
-                    <hr />
-
-                    <hr />
-                    <div className="grid grid-cols-1 gap-4 pt-4 pr-16">
-                        <div className="flex items-center justify-between">
-                            <p className="text-gray-600">Bedrooms:</p>
-                            <p className="font-bold text-indigo-600 mr-auto pl-6">{bedrooms}</p>
+            <PrivateRoute>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>{id} Estate Details</title>
+                    <link rel="canonical" href="http://mysite.com/example" />
+                </Helmet>
+                <div className="mx-auto w-auto flex max-w-auto flex-col items-center justify-center space-y-4 rounded-xl bg-white p-8 font-sans shadow-lg dark:bg-[#18181B]">
+                    <div>
+                        <div className="flex  py-6 text-2xl font-bold  ">
+                            <Marquee pauseOnHover={true} speed={130}>
+                                <Link className="mr-12 " >{id} Estate Details</Link>
+                            </Marquee>
                         </div>
-                        <div className="flex items-center justify-between">
-                            <p className="text-gray-600">Bathrooms:</p>
-                            <p className="font-bold text-indigo-600 mr-auto pl-6">{bathrooms}</p>
+                    </div>
+                    <div className='justify-center items-center'>
+                        <img src={image} alt={estate_title} className="w-full h-full mb-4 rounded-md" />
+                    </div>
+                    <div>
+                        <h1 className="text-2xl font-semibold mb-2 animate__animated animate__backInLeft">{estate_title}</h1>
+                        <h1 className="text-xl font-semibold mb-2">{segment_name}</h1>
+
+                        <div className="py-4">
+                            Our Facilities:
+                            {facilities.map((faciliti, index) => (
+                                <span key={index} className="inline-block px-3 py-1 text-sm font-semibold text-blue-500 mr-2 my-4"> {faciliti}</span>
+                            ))}
                         </div>
-                        {garage && (
+                        <h2 className="text-gray-600 mb-2">Price: {price}</h2>
+                        <hr />
+                        <div className="flex justify-between py-4">
+                            <span>{description}</span>
+                        </div>
+                        <hr />
+                        <hr />
+
+                        <hr />
+                        <div className="grid grid-cols-1 gap-4 pt-4 pr-16">
                             <div className="flex items-center justify-between">
-                                <p className="text-gray-600">Garage:</p>
-                                <p className="font-bold text-indigo-600 mr-auto pl-6">{garage}</p>
+                                <p className="text-gray-600">Bedrooms:</p>
+                                <p className="font-bold text-indigo-600 mr-auto pl-6">{bedrooms}</p>
                             </div>
-                        )}
-                    </div>
+                            <div className="flex items-center justify-between">
+                                <p className="text-gray-600">Bathrooms:</p>
+                                <p className="font-bold text-indigo-600 mr-auto pl-6">{bathrooms}</p>
+                            </div>
+                            {garage && (
+                                <div className="flex items-center justify-between">
+                                    <p className="text-gray-600">Garage:</p>
+                                    <p className="font-bold text-indigo-600 mr-auto pl-6">{garage}</p>
+                                </div>
+                            )}
+                        </div>
 
-                    {/* social icons  */}
-                    <div className="flex justify-between px-60 py-20 gap-4 ">
-                        {svgs?.map((svg, idx) => (<div key={idx} className="rounded-full shadow-[0px_2px_8px_0px_rgba(99,99,99,0.4)]  duration-300 hover:scale-150">{svg?.svg}</div>))}
-                    </div>
-                    <Link to='/'>
-                        <button className="w-full  py-2 my-10 font-medium text-gray-400 shadow-[0px_0px_10px_#E2DADA] duration-500 hover:scale-95  hover:bg-[#0095FF] hover:text-white hover:shadow-xl dark:shadow-[0px_2px_8px_0px_rgba(0,0,0,0.8)]">Home</button>
-                    </Link>
+                        {/* social icons  */}
+                        <div className="flex justify-between px-60 py-20 gap-4 ">
+                            {svgs?.map((svg, idx) => (<div key={idx} className="rounded-full shadow-[0px_2px_8px_0px_rgba(99,99,99,0.4)]  duration-300 hover:scale-150">{svg?.svg}</div>))}
+                        </div>
+                        <Link to='/'>
+                            <button className="w-full  py-2 my-10 font-medium text-gray-400 shadow-[0px_0px_10px_#E2DADA] duration-500 hover:scale-95  hover:bg-[#0095FF] hover:text-white hover:shadow-xl dark:shadow-[0px_2px_8px_0px_rgba(0,0,0,0.8)]">Home</button>
+                        </Link>
 
+                    </div>
                 </div>
-            </div>
+            </PrivateRoute>
         </>
     );
 };

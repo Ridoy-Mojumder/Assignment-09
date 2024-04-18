@@ -7,8 +7,8 @@ const Location = () => {
     const ZOOM_LEVEL = 11;
 
     return (
-        <div className='h-96'>
-            <MapContainer center={mirpurCoordinates} zoom={ZOOM_LEVEL}>
+        <div className='h-[800px]'>
+            <MapContainer center={mirpurCoordinates} zoom={ZOOM_LEVEL} className="h-[800px]">
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

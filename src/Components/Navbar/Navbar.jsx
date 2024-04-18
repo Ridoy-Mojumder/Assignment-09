@@ -3,8 +3,13 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
-    const { user, logOut } = useContext(AuthContext);
+    const { user, logOut, loadingState } = useContext(AuthContext);
     const [showUserName, setShowUserName] = useState(false);
+    const [profilePicLoaded, setProfilePicLoaded] = useState(false);
+
+    if(loadingState && !profilePicLoaded){
+        return <span className="loading loading-spinner text-info"></span>;
+    }
 
     const links = <>
         <li><NavLink className="text-blue-500 font-semibold px-4 py-2 rounded-lg transition duration-300  " activeClassName="activeNavLink" to="/">Home</NavLink></li>
@@ -57,16 +62,17 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end gap-4">
-
                 {user ? (
                     <div className="flex items-center">
                         <div className="relative inline-block">
                             <img
-                                src={user.photoURL} // Using user.photoURL as the src
+                                src={user.photoURL}
                                 alt="User Profile"
                                 className="h-12 w-12 rounded-full cursor-pointer"
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
+                                onLoad={() => setProfilePicLoaded(true)}  // Set loaded state to true when the image loads
+                                onError={() => setProfilePicLoaded(false)}  // Handle error in loading image
                             />
                             {showUserName && (
                                 <span className="absolute left-14 top-0 text-sm bg-white shadow-md p-2 rounded-md">{user.displayName}</span>
@@ -80,18 +86,12 @@ const Navbar = () => {
                         </button>
                     </div>
                 ) : (
-                    <>
-                        <NavLink to='/signIn'>
+                    <NavLink to='/signIn'>
                             <button className='p-2 text-white text-[14px] font-semibold rounded-md shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transition-all duration-300 bg-gradient-to-r from-green-500 to-green-600 lg:w-28'>
                                 Sign In
                             </button>
                         </NavLink>
-
-                    </>
                 )}
-
-
-
             </div>
 
         </div>
