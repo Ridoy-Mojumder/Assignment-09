@@ -104,7 +104,7 @@
     {
       "id": 7,
       "estate_title": "Luxury Penthouse",
-      "segment_name": "Condominiums",
+      "segment_name": "apartments",
       "description": "Luxurious penthouse living in the heart of the city. This upscale property features 3 bedrooms, panoramic city views, and exclusive amenities.",
       "price": "$3,000,000",
       "status": "sale",
@@ -121,7 +121,7 @@
     {
       "id": 8,
       "estate_title": "Modern Townhouse",
-      "segment_name": "Duplexes",
+      "segment_name": "student housing",
       "description": "Sleek and modern townhouse in a vibrant neighborhood. This stylish property features 2 bedrooms, a rooftop terrace, and easy access to amenities.",
       "price": "$850,000",
       "status": "rent",
@@ -138,7 +138,7 @@
     {
       "id": 9,
       "estate_title": "Beachfront Condo",
-      "segment_name": "Luxury homes",
+      "segment_name": "Senior living communities",
       "description": "Beachfront living at its finest. This elegant condo features 2 bedrooms, direct beach access, and stunning sunset views from the balcony.",
       "price": "$900,000",
       "status": "sale",
