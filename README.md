@@ -9,6 +9,7 @@ Property Listings: Browse through a diverse range of property listings, includin
 Interactive Map: Explore properties using an interactive map feature, allowing you to visualize the location and surrounding area of each listing.
 Animated Transitions: Enjoy smooth and captivating transitions throughout the website, powered by the animate.css library.
 Responsive Design: DreamHome is designed to be fully responsive across all devices, ensuring a consistent experience whether you're browsing on a desktop, tablet, or mobile device.
+
 NPM Packages Used:
 animate.css: https://www.npmjs.com/package/animate.css
 react-leaflet: https://www.npmjs.com/package/react-leaflet
